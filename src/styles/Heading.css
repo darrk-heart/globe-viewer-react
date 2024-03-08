@@ -1,0 +1,12 @@
+.head {
+  justify-content: space-between;
+  display: flex;
+}
+.mode-toggle {
+  display: flex;
+  align-items: center;
+}
+.mode-toggle img {
+  width: 16px;
+  margin-right: 10px;
+}
