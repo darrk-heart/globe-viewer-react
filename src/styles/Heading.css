@@ -1,6 +1,8 @@
 .head {
   justify-content: space-between;
+  width: 100%;
   display: flex;
+  border-bottom: 2px solid #eeeeee;
 }
 .mode-toggle {
   display: flex;

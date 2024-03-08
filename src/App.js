@@ -4,9 +4,8 @@ import Heading from "./components/Heading";
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <Heading />
-      </div>
+      <Heading />
+      <div className="container"></div>
     </div>
   );
 }
