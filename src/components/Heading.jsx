@@ -6,10 +6,12 @@ import sun from "../assets/icon-sun.svg";
 function Heading() {
   return (
     <div className="head">
-      <h2>Where in the world</h2>
-      <div className="mode-toggle">
-        <img src={moon} alt="moon icon" />
-        <span>Dark Mode</span>
+      <div>
+        <h2>Where in the world</h2>
+        <div className="mode-toggle">
+          <img src={moon} alt="moon icon" />
+          <span>Dark Mode</span>
+        </div>
       </div>
     </div>
   );

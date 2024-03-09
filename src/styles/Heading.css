@@ -1,8 +1,13 @@
 .head {
-  justify-content: space-between;
   width: 100%;
-  display: flex;
   border-bottom: 2px solid #eeeeee;
+  background-color: yellow;
+}
+.head div {
+  width: 95%;
+  background-color: blue;
+  justify-content: space-between;
+  display: flex;
 }
 .mode-toggle {
   display: flex;
@@ -11,4 +16,7 @@
 .mode-toggle img {
   width: 16px;
   margin-right: 10px;
+}
+.mode-toggle img:hover {
+  cursor: pointer;
 }
