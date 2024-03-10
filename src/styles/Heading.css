@@ -2,6 +2,7 @@
   width: 100%;
   border-bottom: 2px solid #eeeeee;
   display: flex;
+  background-color: white;
 }
 .small-head {
   width: 95%;
@@ -17,7 +18,4 @@
 .sun-moon {
   width: 16px;
   margin-right: 10px;
-}
-.mode-toggle img:hover {
-  cursor: pointer;
 }
