@@ -1,13 +1,14 @@
 .head {
   width: 100%;
   border-bottom: 2px solid #eeeeee;
-  background-color: yellow;
+  display: flex;
 }
-.head div {
+.small-head {
   width: 95%;
-  background-color: blue;
   justify-content: space-between;
   display: flex;
+  margin-right: auto;
+  margin-left: auto;
 }
 .mode-toggle {
   display: flex;

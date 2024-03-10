@@ -6,7 +6,7 @@ import sun from "../assets/icon-sun.svg";
 function Heading() {
   return (
     <div className="head">
-      <div>
+      <div className="small-head">
         <h2>Where in the world</h2>
         <div className="mode-toggle">
           <img src={moon} alt="moon icon" />
