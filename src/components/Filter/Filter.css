@@ -7,3 +7,6 @@
 .lists {
   display: none;
 }
+.lists ul {
+  list-style-type: none;
+}
