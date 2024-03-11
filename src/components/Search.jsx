@@ -5,9 +5,11 @@ function Search() {
     <div
       style={{
         backgroundColor: "white",
+        display: "flex",
       }}
     >
-      Search
+      <img />
+      <input type="text" placeholder="Search for a country" />
     </div>
   );
 }
