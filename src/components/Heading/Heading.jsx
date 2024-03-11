@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/Heading.css";
-import moon from "../assets/icon-moon.svg";
+import "./Heading.css";
+import moon from "../../assets/icon-moon.svg";
 
 function Heading() {
   return (
