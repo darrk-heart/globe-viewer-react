@@ -1,0 +1,9 @@
+.filter {
+  background-color: white;
+  width: 10%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.lists {
+  display: none;
+}
