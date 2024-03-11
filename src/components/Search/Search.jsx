@@ -7,7 +7,7 @@ function Search() {
       style={{
         backgroundColor: "white",
         display: "flex",
-        width: "310px",
+        width: "400px",
         padding: "8px",
         paddingLeft: "20px",
         borderRadius: "4px",
