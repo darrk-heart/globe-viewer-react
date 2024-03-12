@@ -4,9 +4,15 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
-.lists {
-  display: none;
-}
+
 .lists ul {
   list-style-type: none;
+}
+.filter-div{
+  display: flex;
+  justify-content: space-between;
+}
+.hey{
+  display: flex;
+  flex-direction: column;
 }
