@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Content.css";
 import countriesData from "../../data/data.json";
 
 function Content() {
@@ -16,7 +17,7 @@ function Content() {
 
   return (
     <>
-      <div>
+      <div className="rows">
         {randomCountries.map((country) => (
           <div key={country.name}>
             <img
