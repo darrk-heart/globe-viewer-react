@@ -3,12 +3,15 @@ import "./Content.css";
 import countriesData from "../../data/data.json";
 
 function Content() {
-  const [randomCountries, setRandomCountries] = useState([]);
+  const [randomCountries1, setRandomCountries1] = useState([]);
+  const [randomCountries2, setRandomCountries2] = useState([]);
 
   const selectRandomCountries = () => {
     const shuffledCountries = countriesData.sort(() => 0.5 - Math.random());
-    const selectedCountries = shuffledCountries.slice(0, 5);
-    setRandomCountries(selectedCountries);
+    const selectedCountries1 = shuffledCountries.slice(0, 5);
+    const selectedCountries2 = shuffledCountries.slice(5, 10);
+    setRandomCountries1(selectedCountries1);
+    setRandomCountries2(selectedCountries2);
   };
 
   useState(() => {
@@ -18,7 +21,7 @@ function Content() {
   return (
     <>
       <div className="rows">
-        {randomCountries.map((country) => (
+        {randomCountries1.map((country) => (
           <div className="countries" key={country.name}>
             <img
               src={country.flag}
@@ -40,7 +43,7 @@ function Content() {
         ))}
       </div>
       <div className="rows">
-        {randomCountries.map((country) => (
+        {randomCountries2.map((country) => (
           <div className="countries" key={country.name}>
             <img
               src={country.flag}
