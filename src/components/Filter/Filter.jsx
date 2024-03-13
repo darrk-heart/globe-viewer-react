@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import dropdown from "../../assets/drop-down.png";
+import dropup from "../../assets/drop-up.png";
 
 const FilterComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,8 @@ const FilterComponent = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const toggleIcon = isOpen ? dropup : dropdown;
 
   return (
     <div
@@ -35,7 +38,7 @@ const FilterComponent = () => {
           Filter by Region
         </span>
         <img
-          src={dropdown}
+          src={toggleIcon}
           alt="drop down icon "
           style={{ width: "15px", height: "auto" }}
         />
