@@ -7,7 +7,7 @@ function Content() {
 
   const selectRandomCountries = () => {
     const shuffledCountries = countriesData.sort(() => 0.5 - Math.random());
-    const selectedCountries = shuffledCountries.slice(0, 8);
+    const selectedCountries = shuffledCountries.slice(0, 4);
     setRandomCountries(selectedCountries);
   };
 
@@ -19,7 +19,7 @@ function Content() {
     <>
       <div className="rows">
         {randomCountries.map((country) => (
-          <div key={country.name}>
+          <div className="countries" key={country.name}>
             <img
               src={country.flag}
               alt={`${country.name} flag`}
