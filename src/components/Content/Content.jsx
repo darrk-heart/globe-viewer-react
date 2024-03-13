@@ -26,10 +26,16 @@ function Content() {
               width="220"
               height="150"
             />
-            <p>{country.name}</p>
-            <p>Population: {country.population}</p>
-            <p>Region: {country.region}</p>
-            <p>Capital: {country.capital}</p>
+            <h4>{country.name}</h4>
+            <p>
+              <span>Population:</span> {country.population}
+            </p>
+            <p>
+              <span>Region:</span> {country.region}
+            </p>
+            <p>
+              <span>Capital:</span> {country.capital}
+            </p>
           </div>
         ))}
       </div>
