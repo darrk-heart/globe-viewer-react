@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import dropdown from "../../assets/drop-down.png";
 import dropup from "../../assets/drop-up.png";
 
-const FilterComponent = () => {
+const FilterComponent = ({ onFilterChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -10,6 +10,10 @@ const FilterComponent = () => {
   };
 
   const toggleIcon = isOpen ? dropup : dropdown;
+
+  const handleFilterClick = (value) => {
+    onFilterChange(value);
+  };
 
   return (
     <div
@@ -68,11 +72,11 @@ const FilterComponent = () => {
               cursor: "pointer",
             }}
           >
-            <li>Africa</li>
-            <li>America</li>
-            <li>Asia</li>
-            <li>Europe</li>
-            <li>Oceania</li>
+            <li onClick={() => handleFilterClick("Africa")}>Africa</li>
+            <li onClick={() => handleFilterClick("America")}>America</li>
+            <li onClick={() => handleFilterClick("Asia")}>Asia</li>
+            <li onClick={() => handleFilterClick("Europe")}>Europe</li>
+            <li onClick={() => handleFilterClick("Oceania")}>Oceania</li>
           </ul>
         </div>
       )}

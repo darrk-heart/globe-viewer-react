@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Content.css";
 import countriesData from "../../data/data.json";
 
-function Content() {
+function Content({ filter }) {
   const [randomCountries1, setRandomCountries1] = useState([]);
   const [randomCountries2, setRandomCountries2] = useState([]);
 
@@ -14,14 +14,26 @@ function Content() {
     setRandomCountries2(selectedCountries2);
   };
 
-  useState(() => {
+  useEffect(() => {
     selectRandomCountries();
   }, []);
+
+  const filterCountries = (countries) => {
+    if (!filter) {
+      return countries;
+    }
+    return countries.filter((country) =>
+      country.region.toLowerCase().includes(filter.toLowerCase())
+    );
+  };
+
+  const filteredCountries1 = filterCountries(randomCountries1);
+  const filteredCountries2 = filterCountries(randomCountries2);
 
   return (
     <>
       <div className="rows">
-        {randomCountries1.map((country) => (
+        {filteredCountries1.map((country) => (
           <div className="countries" key={country.name}>
             <img
               src={country.flag}
@@ -43,7 +55,7 @@ function Content() {
         ))}
       </div>
       <div className="rows">
-        {randomCountries2.map((country) => (
+        {filteredCountries2.map((country) => (
           <div className="countries" key={country.name}>
             <img
               src={country.flag}
