@@ -17,14 +17,12 @@ const FilterComponent = ({ onFilterChange }) => {
 
   return (
     <div
-      className="filter"
       style={{
         position: "relative",
         display: "inline-block",
       }}
     >
       <div
-        className="filter-header"
         onClick={toggleDropdown}
         style={{
           display: "flex",
@@ -49,7 +47,6 @@ const FilterComponent = ({ onFilterChange }) => {
       </div>
       {isOpen && (
         <div
-          className="dropdown-content"
           style={{
             position: "absolute",
             top: "105%",
