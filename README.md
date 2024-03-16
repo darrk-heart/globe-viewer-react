@@ -14,7 +14,7 @@ I'mma keep you in touch right
 
 ## UI
 
-[image](../globe-viewer-react/src/final/capture.PNG)
+![image](./src/final/capture.PNG)
 
 ## License
 
