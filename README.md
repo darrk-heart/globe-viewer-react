@@ -14,7 +14,7 @@ I'mma keep you in touch right
 
 ## UI
 
-i will upload it as soon as i am done with the UI
+![image](../globe-viewer-react/src/final/capture.PNG)
 
 ## License
 
@@ -22,4 +22,4 @@ This project is as every project licensed under [MIT](LICENSE).
 
 ## Contributions
 
-all contributions are soo welcome, just send a PR
+truth be told, i need to come back to this project coz there is a lot to be done, will be glad if you could help
