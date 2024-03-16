@@ -75,7 +75,7 @@ function Content({ filter }) {
             </p>
           </div>
         ))}
-      </div>
+      </div> //mistake on this line
     </>
   );
 }
