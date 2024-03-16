@@ -7,6 +7,11 @@ import React, { useState } from "react";
 
 function App() {
   const [filter, setFilter] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
 
   const handleFilterChange = (value) => {
     setFilter(value);
@@ -17,10 +22,10 @@ function App() {
       <Heading />
       <div className="container">
         <div className="search-filter">
-          <Search />
+          <Search onSearch={handleSearch} />
           <Filter onFilterChange={handleFilterChange} />
         </div>
-        <Content filter={filter} />
+        <Content filter={filter || searchQuery} />
       </div>
     </div>
   );

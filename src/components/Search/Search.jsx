@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import searchicon from "../../assets/search-button.svg";
 
-function Search() {
+function Search({ onSearch }) {
+  const [query, setQuery] = useState("");
+
+  const handleChange = (event) => {
+    const { value } = event.target;
+    setQuery(value);
+    onSearch(value);
+  };
   return (
     <div
       style={{
@@ -25,6 +32,8 @@ function Search() {
           outline: "none",
           width: "80%",
         }}
+        value={query}
+        onChange={handleChange}
       />
     </div>
   );

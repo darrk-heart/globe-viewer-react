@@ -1,3 +1,4 @@
+// Content.js
 import React, { useState, useEffect } from "react";
 import "./Content.css";
 import countriesData from "../../data/data.json";
@@ -18,17 +19,26 @@ function Content({ filter }) {
     selectRandomCountries();
   }, []);
 
-  const filterCountries = (countries) => {
-    if (!filter) {
+  const filterCountriesByName = (countries, searchQuery) => {
+    if (!searchQuery) {
       return countries;
     }
     return countries.filter((country) =>
-      country.region.toLowerCase().includes(filter.toLowerCase())
+      country.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
   };
 
-  const filteredCountries1 = filterCountries(randomCountries1);
-  const filteredCountries2 = filterCountries(randomCountries2);
+  const filterCountriesByRegion = (countries, regionFilter) => {
+    if (!regionFilter) {
+      return countries;
+    }
+    return countries.filter((country) =>
+      country.region.toLowerCase().includes(regionFilter.toLowerCase())
+    );
+  };
+
+  const filteredCountries1 = filterCountriesByName(randomCountries1, filter);
+  const filteredCountries2 = filterCountriesByName(randomCountries2, filter);
 
   return (
     <>
@@ -75,7 +85,7 @@ function Content({ filter }) {
             </p>
           </div>
         ))}
-      </div> //mistake on this line
+      </div>
     </>
   );
 }
