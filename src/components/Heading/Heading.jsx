@@ -14,7 +14,8 @@ function Heading() {
         width: "100%",
         borderBottom: "2px solid #eeeeee",
         display: "flex",
-        backgroundColor: "white",
+        backgroundColor: isDarkMode ? "white" : "#2b3743",
+        color: isDarkMode ? "black" : "white",
       }}
     >
       <div
@@ -27,7 +28,7 @@ function Heading() {
           alignItems: "center",
         }}
       >
-        <h2>Where in the world ?</h2>
+        <h2>Where in the world?</h2>
         <div
           style={{
             display: "flex",
