@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Content.css";
 import countriesData from "../../data/data.json";
+import { Link } from "react-router-dom";
 
 function Content({ filter, isDarkMode }) {
   const [randomCountries1, setRandomCountries1] = useState([]);
@@ -49,12 +50,14 @@ function Content({ filter, isDarkMode }) {
             }
             key={country.name}
           >
-            <img
-              src={country.flag}
-              alt={`${country.name} flag`}
-              width="220"
-              height="150"
-            />
+            <Link to="/modal">
+              <img
+                src={country.flag}
+                alt={`${country.name} flag`}
+                width="220"
+                height="150"
+              />
+            </Link>
             <h4>{country.name}</h4>
             <p>
               <span>Population:</span> {country.population}
