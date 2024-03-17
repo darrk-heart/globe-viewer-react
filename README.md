@@ -24,4 +24,4 @@ soo welcome!!
 
 - Countries with long names have issues when they are displayed
 - My search and filter components been conflicting, when i fix one the other goes south.
-- More details page is a work in progress
+- Country details page is a work in progress
