@@ -1,7 +1,13 @@
-import React from "react";
-import moon from "../../assets/icon-moon.svg";
+import React, { useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 function Heading() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <div
       style={{
@@ -18,6 +24,7 @@ function Heading() {
           display: "flex",
           marginRight: "auto",
           marginLeft: "auto",
+          alignItems: "center",
         }}
       >
         <h2>Where in the world ?</h2>
@@ -27,15 +34,19 @@ function Heading() {
             alignItems: "center",
           }}
         >
-          <img
-            src={moon}
-            alt="moon icon"
+          <span
+            onClick={toggleMode}
             style={{
-              width: "16px",
-              marginRight: "10px",
+              marginRight: "15px",
+              paddingTop: "4px",
+              cursor: "pointer",
             }}
-          />
-          <span>Dark Mode</span>
+          >
+            {isDarkMode ? <FaMoon /> : <FaSun />}
+          </span>
+          <span onClick={toggleMode} style={{ cursor: "pointer" }}>
+            {isDarkMode ? "Dark Mode" : "Light Mode"}
+          </span>
         </div>
       </div>
     </div>
