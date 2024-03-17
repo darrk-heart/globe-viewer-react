@@ -1,4 +1,3 @@
-// Content.js
 import React, { useState, useEffect } from "react";
 import "./Content.css";
 import countriesData from "../../data/data.json";
