@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Content.css";
 import countriesData from "../../data/data.json";
 
-function Content({ filter }) {
+function Content({ filter, isDarkMode }) {
   const [randomCountries1, setRandomCountries1] = useState([]);
   const [randomCountries2, setRandomCountries2] = useState([]);
 
@@ -43,7 +43,12 @@ function Content({ filter }) {
     <>
       <div className="rows">
         {filteredCountries1.map((country) => (
-          <div className="countries" key={country.name}>
+          <div
+            className={
+              isDarkMode ? "countries light-mode" : "countries dark-mode"
+            }
+            key={country.name}
+          >
             <img
               src={country.flag}
               alt={`${country.name} flag`}
@@ -65,7 +70,12 @@ function Content({ filter }) {
       </div>
       <div className="rows">
         {filteredCountries2.map((country) => (
-          <div className="countries" key={country.name}>
+          <div
+            className={
+              isDarkMode ? "countries light-mode" : "countries dark-mode "
+            }
+            key={country.name}
+          >
             <img
               src={country.flag}
               alt={`${country.name} flag`}

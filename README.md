@@ -10,7 +10,7 @@ As part of the projects i am doing to broaden my js and react skills, i picked t
 
 ## UI
 
-![image](./src/final/capture.PNG)
+![image](./src/final/captures.PNG)
 
 ## License
 
@@ -23,5 +23,5 @@ soo welcome!!
 ## Known Issues
 
 - Countries with long names have issues when they are displayed
-- I am having issues with the dark and light theme, wish i knew an approach to solve it
 - My search and filter components been conflicting, when i fix one the other goes south.
+- More details page is a work in progress

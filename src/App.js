@@ -24,14 +24,14 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={isDarkMode ? "App" : " App dark"}>
       <Heading isDarkMode={isDarkMode} toggleMode={toggleMode} />
       <div className="container">
         <div className="search-filter">
-          <Search onSearch={handleSearch} />
-          <Filter onFilterChange={handleFilterChange} />
+          <Search isDarkMode={isDarkMode} onSearch={handleSearch} />
+          <Filter isDarkMode={isDarkMode} onFilterChange={handleFilterChange} />
         </div>
-        <Content filter={filter || searchQuery} />
+        <Content isDarkMode={isDarkMode} filter={filter || searchQuery} />
       </div>
     </div>
   );

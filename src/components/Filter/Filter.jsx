@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import dropdown from "../../assets/drop-down.png";
 import dropup from "../../assets/drop-up.png";
 
-const FilterComponent = ({ onFilterChange }) => {
+const FilterComponent = ({ onFilterChange, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -27,16 +27,22 @@ const FilterComponent = ({ onFilterChange }) => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "white",
           padding: "15px",
           borderRadius: "4px",
           boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
           cursor: "pointer",
           minWidth: "170px",
+          backgroundColor: isDarkMode ? "white" : "#2b3743",
         }}
       >
-        <span style={{ fontWeight: "600", fontSize: "0.9rem" }}>
+        <span
+          style={{
+            fontWeight: "600",
+            fontSize: "0.9rem",
+            backgroundColor: isDarkMode ? "white" : "#2b3743",
+            color: isDarkMode ? "black" : "white",
+          }}
+        >
           Filter by Region
         </span>
         <img
@@ -51,7 +57,7 @@ const FilterComponent = ({ onFilterChange }) => {
             position: "absolute",
             top: "105%",
             left: 0,
-            backgroundColor: "white",
+            backgroundColor: isDarkMode ? "white" : "#2b3743",
             borderRadius: "4px",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
             width: "100%",
@@ -65,8 +71,8 @@ const FilterComponent = ({ onFilterChange }) => {
               lineHeight: "2",
               fontWeight: "500",
               fontSize: "0.9rem",
-              color: "#444444",
               cursor: "pointer",
+              color: isDarkMode ? "#444444" : "white",
             }}
           >
             <li onClick={() => handleFilterClick("Africa")}>Africa</li>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import searchicon from "../../assets/search-button.svg";
+import { FaSearch } from "react-icons/fa";
 
-function Search({ onSearch }) {
+function Search({ onSearch, isDarkMode }) {
   const [query, setQuery] = useState("");
 
   const handleChange = (event) => {
@@ -12,7 +12,8 @@ function Search({ onSearch }) {
   return (
     <div
       style={{
-        backgroundColor: "white",
+        backgroundColor: isDarkMode ? "white" : "#2b3743",
+        color: isDarkMode ? "black" : "white",
         display: "flex",
         width: "400px",
         padding: "8px",
@@ -21,7 +22,7 @@ function Search({ onSearch }) {
         boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <img src={searchicon} alt="searchicon" style={{ width: "15px" }} />
+      <FaSearch style={{ paddingTop: "8px" }} />
       <input
         type="text"
         placeholder="Search for a country"
@@ -31,6 +32,7 @@ function Search({ onSearch }) {
           padding: "inherit",
           outline: "none",
           width: "80%",
+          color: "inherit",
         }}
         value={query}
         onChange={handleChange}

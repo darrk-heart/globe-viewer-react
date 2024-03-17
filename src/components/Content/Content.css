@@ -1,10 +1,17 @@
+.dark-mode {
+  background-color: #2b3743;
+  color: white;
+}
+.light-mode {
+  background-color: white;
+}
+
 .rows {
   display: flex;
   justify-content: space-between;
 }
 
 .countries {
-  background-color: white;
   border-radius: 5px;
   width: 15%;
   display: flex;

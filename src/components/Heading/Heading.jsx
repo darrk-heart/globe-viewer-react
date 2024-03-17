@@ -5,7 +5,7 @@ function Heading({ isDarkMode, toggleMode }) {
     <div
       style={{
         width: "100%",
-        borderBottom: "2px solid #eeeeee",
+        borderBottom: isDarkMode ? "2px solid #eeeeee" : "2px solid #202d36",
         display: "flex",
         backgroundColor: isDarkMode ? "white" : "#2b3743",
         color: isDarkMode ? "black" : "white",
