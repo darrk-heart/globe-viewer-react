@@ -1,13 +1,6 @@
-import React, { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-function Heading() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
+function Heading({ isDarkMode, toggleMode }) {
   return (
     <div
       style={{

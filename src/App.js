@@ -17,9 +17,15 @@ function App() {
     setFilter(value);
   };
 
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <div className="App">
-      <Heading />
+      <Heading isDarkMode={isDarkMode} toggleMode={toggleMode} />
       <div className="container">
         <div className="search-filter">
           <Search onSearch={handleSearch} />
